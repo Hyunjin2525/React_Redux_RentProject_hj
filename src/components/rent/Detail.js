@@ -44,7 +44,7 @@ function Detail(){
                         <div className="wrap-slick3 flex-sb flex-w">
                             <div className="wrap-slick3-dots"></div>
                             <div className="wrap-slick3-arrows flex-sb-m flex-w" ></div>
-                                <img src={rentDetail.image} />
+                                <img src={rentDetail.image} style={{"width":"700px"}}/>
                             </div>
                         </div>
                     </div>
