@@ -35,14 +35,14 @@ function List(){
                     <div className="block2-pic hov-img0">
                         <img src={r.image} alt="IMG-PRODUCT"/>
 
-                        <NavLink to={"/shop/detail/"+r.rno} className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                        <NavLink to={"/rent/detail/"+r.rno} className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                             상품 보기
                         </NavLink>
                     </div>
 
                     <div className="block2-txt flex-w flex-t p-t-14">
                         <div className="block2-txt-child1 flex-col-l ">
-                            <NavLink to={"/shop/detail/"+r.rno} className="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                            <NavLink to={"/rent/detail/"+r.rno} className="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                                 {r.car_name}
                             </NavLink>
 

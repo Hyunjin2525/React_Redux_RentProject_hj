@@ -1,4 +1,11 @@
-import {FETCH_PAGE, FETCH_RENT_LIST, FETCH_RENT_MAIN, FETCH_RENT_MAIN_MARKER} from "../actions/types";
+import {
+    FETCH_NEWS,
+    FETCH_PAGE,
+    FETCH_RENT_DETAIL,
+    FETCH_RENT_LIST,
+    FETCH_RENT_MAIN,
+    FETCH_RENT_MAIN_MARKER
+} from "../actions/types";
 
 // 데이터를 저장 = useState
 // useSelector((state)=> cate_food)
@@ -7,7 +14,8 @@ const initialState={
     rent_main:[],
     rent_detail:{},
     rent_main_maker:[],
-    page_data:{}
+    page_data:{},
+    news_data:[]
 }
 /*
     react = JSP
@@ -44,6 +52,16 @@ export default function (state=initialState,action){
             return {
                 ...state,
                 page_data: action.payload
+            }
+        case FETCH_NEWS:
+            return {
+                ...state,
+                news_data: action.payload
+            }
+        case FETCH_RENT_DETAIL:
+            return {
+                ...state,
+                rent_detail: action.payload
             }
         default:
             return state;

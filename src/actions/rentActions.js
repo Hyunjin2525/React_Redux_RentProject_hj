@@ -1,4 +1,11 @@
-import {FETCH_PAGE, FETCH_RENT_LIST, FETCH_RENT_MAIN, FETCH_RENT_MAIN_MARKER} from "./types";
+import {
+    FETCH_NEWS,
+    FETCH_PAGE,
+    FETCH_RENT_DETAIL,
+    FETCH_RENT_LIST,
+    FETCH_RENT_MAIN,
+    FETCH_RENT_MAIN_MARKER
+} from "./types";
 import axios from "axios";
 import {type} from "@testing-library/user-event/dist/type";
 
@@ -40,6 +47,30 @@ export const fetchPage=(fd,page)=>dispatch=>{
         }
     }).then(res=>dispatch({
         type:FETCH_PAGE,
+        payload:res.data
+    }))
+}
+
+// 디테일
+export const fetchRentDetail=(rno)=>dispatch=>{
+    axios.get('http://localhost/rent/rent_detail',{
+        params:{
+            rno:rno
+        }
+    }).then(res=>dispatch({
+        type:FETCH_RENT_DETAIL,
+        payload:res.data
+    }))
+}
+
+//뉴스
+export const fetchNews=(fd)=>dispatch=>{
+    axios.get('http://localhost/news/news_find_react',{
+        params:{
+            fd:fd
+        }
+    }).then(res=>dispatch({
+        type:FETCH_NEWS,
         payload:res.data
     }))
 }
